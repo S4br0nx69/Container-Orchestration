@@ -9,5 +9,13 @@ I need to deploy a web poll application on a multi-host cluster using Kubernetes
 - Result: A Node.js web application that retrieves the votes from the database and displays the results.
 
 ### Requirement : ###
+- I must configure a load balancer (Traefik) to handle the routing of the Poll and Result services.
+- Two databases need to be configured: Redis and PostgreSQL, each with specific configurations.
+- Three services need to be deployed and managed, two of which will be routed via Traefik.
+- A monitoring tool (cadvisor) must be set up to monitor the containers.
+
+### Deployment : ###
+- The deployment involves creating and configuring several YAML files to orchestrate the different components of the application.
+- Instructions are provided for deploying each component of the application in Kubernetes, as well as for configuring routing rules and persistent volumes.
 
 
