@@ -28,11 +28,16 @@ The architecture of this project is designed to ensure high availability, scalab
 ### Prerequisites ###
 
 Before you start deploying the application, ensure you have the following tools and environments set up : 
-- Kubernetes Cluster: A cluster with at least one master node and two worker nodes ![image](https://github.com/user-attachments/assets/0bd797a5-20a8-4f51-a716-a02fd14e2edb)
+- Kubernetes Cluster: A cluster with at least one master node and two worker nodes
 - kubectl : Kubernetes command-line tool
 - Docker : For building and managing container images
 - Traefik : Configured as the ingress controller for the Kubernetes cluster
 - cAdvisor : For monitoring container resource usage
+
+
+### Deployment Instructions ###
+
+To deploy the application, follow these steps:
 
 
 
