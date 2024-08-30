@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poll
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: poll
+  template:
+    metadata:
+      labels:
+        app: poll
+        traefik.enable: "true"
+        traefik.http.routers.poll.rule: "Host(`poll.dop.io`)"
+        traefik.http.services.poll.loadbalancer.server.port: "80"
+    spec:
+      restartPolicy: Always
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - poll
+            topologyKey: "kubernetes.io/hostname"
+      containers:
+      - name: poll
+        image: epitechcontent/t-dop-600-poll:k8s
+        envFrom:
+        - configMapRef:
+            name: redis-config
+        resources:
+          limits:
+            memory: "128M"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
