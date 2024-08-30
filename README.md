@@ -8,5 +8,6 @@ I need to deploy a web poll application on a multi-host cluster using Kubernetes
 - PostgreSQL: A relational database that persistently stores the votes.
 - Result: A Node.js web application that retrieves the votes from the database and displays the results.
 
+### Requirement : ###
 
 
