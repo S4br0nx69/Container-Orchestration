@@ -4,10 +4,16 @@
 The Kubernetes Container Orchestartion is a scalable and containerized web application orchestrated using Kubernetes. The project simulates a poll application with multiple interconnected services, managed by Kubernetes, and monitored for performance. Traefik is used as the load balancer and reverse proxy to efficiently route traffic between services.
 
 ### Project Components ###
-- #Poll (Flask Application):# A Python-based web application that collects user votes and pushes them to a Redis queue
+- Poll (Flask Application) : A Python-based web application that collects user votes and pushes them to a Redis queue
 - Redis Queue : An in-memory data store that temporarily holds the votes until they are processed
 - Worker (Java Application) : A Java-based application that processes the votes from Redis and stores them in the PostgreSQL database
-- PostgreSQL Database : A relational database that persistently stores the processed votes.
+- PostgreSQL Database : A relational database that persistently stores the processed votes
+- Result (Node.js Application) : A Node.js-based web application that retrieves and displays the poll results from the PostgreSQL database
+- Traefik (Load Balancer) : Manages the routing of traffic between the services and provides an entry point to the application
+- cAdvisor (Monitoring Tool) : A tool for monitoring the resource usage and performance of the containers
+
+
+
 
 
 
