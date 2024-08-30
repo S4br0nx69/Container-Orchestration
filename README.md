@@ -17,12 +17,26 @@ The Kubernetes Container Orchestartion is a scalable and containerized web appli
 
 ### Architecture ###
 
-The architecture of this project is designed to ensure high availability, scalability, and efficient management of resources. Below is an overview of the key architectural components.
+The architecture of this project is designed to ensure high availability, scalability, and efficient management of resources. Below is an overview of the key architectural components :
 - Kubernetes Master Node : Orchestrates the entire cluster, managing deployments, scaling, and service discovery
 - Kubernetes Worker Nodes : Host the actual application services. At least two nodes are used to ensure redundancy and high availability
 - Traefik: Acts as the entry point for the application, balancing the load across the services and routing requests based on predefined rules
 
 ![Diagramme sans nom drawio (2)](https://github.com/user-attachments/assets/53511900-769f-41a2-af67-3bb973ba71ec)
+
+
+### Prerequisites ###
+
+Before you start deploying the application, ensure you have the following tools and environments set up : 
+- Kubernetes Cluster: A cluster with at least one master node and two worker nodes ![alt text]([http://url/to/img.png](https://www.google.com/url?sa=i&url=https%3A%2F%2Ficonduck.com%2Ficons%2F94534%2Fkubernetes&psig=AOvVaw3BmyBr1zb1RY9b81ArtqDR&ust=1725115639682000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCt3tj6nIgDFQAAAAAdAAAAABAE))
+
+- kubectl : Kubernetes command-line tool
+- Docker : For building and managing container images
+- Traefik : Configured as the ingress controller for the Kubernetes cluster
+- cAdvisor : For monitoring container resource usage
+
+
+
 
 
 
