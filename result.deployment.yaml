@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: result
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: result
+  template:
+    metadata:
+      labels:
+        app: result
+        traefik.enable: "true"
+        traefik.http.routers.result.rule: "Host(`result.dop.io`)"
+        traefik.http.services.result.loadbalancer.server.port: "80"
+    spec:
+      restartPolicy: Always
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - result
+            topologyKey: "kubernetes.io/hostname"
+      containers:
+      - name: result
+        image: epitechcontent/t-dop-600-result:k8s
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - secretRef:
+            name: postgres-secret
+        resources:
+          limits:
+            memory: "128M"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
