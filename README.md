@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/d90f242e-6bb1-4b6e-a947-d891881aee9b)
+
 ### Main Objective : ###
 
 I need to deploy a web poll application on a multi-host cluster using Kubernetes. The application consists of several containerized components and uses Traefik as a reverse proxy and load balancer.
