@@ -22,7 +22,8 @@ The architecture of this project is designed to ensure high availability, scalab
 - Kubernetes Worker Nodes : Host the actual application services. At least two nodes are used to ensure redundancy and high availability
 - Traefik: Acts as the entry point for the application, balancing the load across the services and routing requests based on predefined rules
 
-![Diagramme sans nom drawio](https://github.com/user-attachments/assets/7152491c-36e4-4027-9b2e-79b5de567cc6)
+![Diagramme sans nom drawio (2)](https://github.com/user-attachments/assets/53511900-769f-41a2-af67-3bb973ba71ec)
+
 
 
 
