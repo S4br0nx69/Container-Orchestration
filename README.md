@@ -18,6 +18,4 @@ I need to deploy a web poll application on a multi-host cluster using Kubernetes
 
 ### Deployment : ###
 - The deployment involves creating and configuring several YAML files to orchestrate the different components of the application.
-- Instructions are provided for deploying each component of the application in Kubernetes, as well as for configuring routing rules and persistent volumes.
-
 
