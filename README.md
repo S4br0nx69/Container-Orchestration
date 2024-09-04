@@ -37,7 +37,7 @@ Before you start deploying the application, ensure you have the following tools 
 
 ### Deployment Instructions ###
 
-To deploy the application, follow these steps:
+To deploy the application, follow these steps :
 
 
 
