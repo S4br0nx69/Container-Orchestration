@@ -40,10 +40,25 @@ Before you start deploying the application, ensure you have the following tools 
 To deploy the application, follow these steps :
 - Ensure your Kubernetes cluster is up and running with the necessary nodes.
 
-## Deploy Services ##
+###1. Deploy Services ###
 - Deploy the PostgreSQL database :
 ```bash
 kubectl apply -f postgres.secret.yaml -f postgres.configmap.yaml -f postgres.volume.yaml -f postgres.deployment.yaml -f postgres.service.yaml
+```
+
+- Deploy Redis :
+```bash
+kubectl apply -f redis.configmap.yaml -f redis.deployment.yaml -f redis.service.yaml
+```
+
+- Deploy the Poll, Worker, and Result services :
+```bash
+kubectl apply -f poll.deployment.yaml -f worker.deployment.yaml -f result.deployment.yaml -f poll.service.yaml -f result.service.yaml -f poll.ingress.yaml -f result.ingress.yaml
+```
+
+- Deploy Traefik :
+```bash
+kubectl apply -f traefik.rbac.yaml -f traefik.deployment.yaml -f traefik.service.yaml
 ```
 
 
