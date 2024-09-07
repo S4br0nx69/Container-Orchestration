@@ -3,12 +3,13 @@
 ## Supported Versions
 
 
-| Version | Supported          |
-| ------- | ------------------ |
-| Kubernetes v.1.31.0 | :white_check_mark: |
-| Docker v.27.2.0  | :white_check_mark:    |
-| Traefik v.2.7  | :white_check_mark: |
-| < 4.0   | :x:                |
+| Version | Supported                    |
+| ------- | -------------------------- 
+|Tools and Platforms :
+| Kubernetes 1.31.0 | :white_check_mark: |
+| Docker 27.2.0  | :white_check_mark:    |
+| Traefik 2.7  | :white_check_mark:      |
+| cAdvisor 0.49.1  | :white_check_mark:  |
 
 ## Reporting a Vulnerability
 
