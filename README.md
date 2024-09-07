@@ -38,7 +38,7 @@ Before you start deploying the application, ensure you have the following tools 
 ### Deployment Instructions ###
 
 To deploy the application, follow these steps :
-- ⚠️ Ensure your Kubernetes cluster is up and running with the necessary nodes.
+⚠️ Ensure your Kubernetes cluster is up and running with the necessary nodes.
 
 #### 1 Deploy Services ####
 
@@ -75,7 +75,12 @@ echo "CREATE TABLE votes (id text PRIMARY KEY, vote text NOT NULL);" | kubectl e
 echo "$(kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="ExternalIP")].address}') poll.dop.io result.dop.io" | sudo tee -a /etc/hosts
 ```
 
-
+#### 4 Monitor the Application : 
+- Use cAdvisor to monitor container performance :
+```bash
+kubectl apply -f cadvisor.daemonset.yaml
+```
+- The Traefik dashboard is running at http://localhost:30042 
 
 
 
