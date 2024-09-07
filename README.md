@@ -70,6 +70,11 @@ echo "CREATE TABLE votes (id text PRIMARY KEY, vote text NOT NULL);" | kubectl e
 
 #### 3 Configure Hosts File ####
 
+- Map the external IPs to the poll and result services :
+```bash
+echo "$(kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="ExternalIP")].address}') poll.dop.io result.dop.io" | sudo tee -a /etc/hosts
+```
+
 
 
 
