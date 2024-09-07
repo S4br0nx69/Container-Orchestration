@@ -61,8 +61,14 @@ kubectl apply -f poll.deployment.yaml -f worker.deployment.yaml -f result.deploy
 ```bash
 kubectl apply -f traefik.rbac.yaml -f traefik.deployment.yaml -f traefik.service.yaml
 ```
-#### 2 Initialize the Database : ####
+#### 2 Initialize the Database ####
 
+- Create the necessary tables in PostgreSQL :
+```bash
+echo "CREATE TABLE votes (id text PRIMARY KEY, vote text NOT NULL);" | kubectl exec -i -c postgres-container psql -U POSTGRES_USER
+```
+
+#### 3 Configure Hosts File ####
 
 
 
