@@ -38,7 +38,7 @@ Before you start deploying the application, ensure you have the following tools 
 ### Deployment Instructions ###
 
 To deploy the application, follow these steps :
-- Ensure your Kubernetes cluster is up and running with the necessary nodes.
+- ⚠️ Ensure your Kubernetes cluster is up and running with the necessary nodes.
 
 #### 1 Deploy Services ####
 
