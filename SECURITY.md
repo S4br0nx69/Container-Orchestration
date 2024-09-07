@@ -5,9 +5,9 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| Kubernetes 1.31.0 | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
+| Kubernetes v.1.31.0 | :white_check_mark: |
+| Docker v.27.2.0  | :white_check_mark:    |
+| Traefik v.2.7  | :white_check_mark: |
 | < 4.0   | :x:                |
 
 ## Reporting a Vulnerability
