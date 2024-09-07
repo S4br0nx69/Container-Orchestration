@@ -9,8 +9,8 @@
 | Docker 27.2.0  | :white_check_mark:    |
 | Traefik 2.7  | :white_check_mark:      |
 | cAdvisor 0.49.1  | :white_check_mark:  | 
-| Flask 2.3.2 compatible with Python 3.11    | :white_check_mark:  |
-| Redis 7.4.6      | :white_check_mark:  |
+| Flask 2.3.2 | :white_check_mark:  |
+| Redis 7.4.6 | :white_check_mark:  |
 
 
 ## Reporting a Vulnerability
