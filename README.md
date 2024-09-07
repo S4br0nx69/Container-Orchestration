@@ -40,7 +40,8 @@ Before you start deploying the application, ensure you have the following tools 
 To deploy the application, follow these steps :
 - Ensure your Kubernetes cluster is up and running with the necessary nodes.
 
-###1. Deploy Services ###
+### Deploy Services ###
+1. 
 - Deploy the PostgreSQL database :
 ```bash
 kubectl apply -f postgres.secret.yaml -f postgres.configmap.yaml -f postgres.volume.yaml -f postgres.deployment.yaml -f postgres.service.yaml
