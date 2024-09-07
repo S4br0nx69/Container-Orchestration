@@ -80,7 +80,13 @@ echo "$(kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="Ex
 ```bash
 kubectl apply -f cadvisor.daemonset.yaml
 ```
-- The Traefik dashboard is running at http://localhost:30042 
+- The Traefik dashboard is running at http://localhost:30042
+
+### Access To The Application ###
+
+- Poll Application: http://poll.dop.io:30021
+- Result Application: http://result.dop.io:30021
+- Traefik Dashboard: http://localhost:30042
 
 
 
