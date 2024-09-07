@@ -20,7 +20,7 @@ The Kubernetes Container Orchestartion is a scalable and containerized web appli
 The architecture of this project is designed to ensure high availability, scalability, and efficient management of resources. Below is an overview of the key architectural components :
 - Kubernetes Master Node : Orchestrates the entire cluster, managing deployments, scaling, and service discovery
 - Kubernetes Worker Nodes : Host the actual application services. At least two nodes are used to ensure redundancy and high availability
-- Traefik: Acts as the entry point for the application, balancing the load across the services and routing requests based on predefined rules
+- Traefik : Acts as the entry point for the application, balancing the load across the services and routing requests based on predefined rules
 
 ![Diagramme sans nom drawio (2)](https://github.com/user-attachments/assets/53511900-769f-41a2-af67-3bb973ba71ec)
 
@@ -38,6 +38,13 @@ Before you start deploying the application, ensure you have the following tools 
 ### Deployment Instructions ###
 
 To deploy the application, follow these steps :
+- Ensure your Kubernetes cluster is up and running with the necessary nodes.
+
+## Deploy Services ##
+- Deploy the PostgreSQL database :
+```bash
+kubectl apply -f postgres.secret.yaml -f postgres.configmap.yaml -f postgres.volume.yaml -f postgres.deployment.yaml -f postgres.service.yaml
+```
 
 
 
